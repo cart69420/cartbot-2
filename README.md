@@ -1,3 +1,3 @@
 # cartbot-2
 
-cartbot, uploading when done
+thay <token bot cua ban> trong example.env rồi rename file thành .env nha
