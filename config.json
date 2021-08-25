@@ -1,0 +1,10 @@
+{
+    "prefix": ">",
+    "admin": ["453829936927735819"],
+    "embed_colors": {
+        "error": "RED",
+        "warning": "ORANGE",
+        "success": "GREEN",
+        "blacklist": "BLACK"
+    }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "cartbot",
+  "version": "2.0.0",
+  "description": "discord bot by cart",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cart69420/cartbot.git"
+  },
+  "author": "cart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cart69420/cartbot/issues"
+  },
+  "homepage": "https://github.com/cart69420/cartbot#readme",
+  "dependencies": {
+    "discord-banner": "^1.6.7",
+    "discord.js": "^13.1.0",
+    "dotenv": "^10.0.0",
+    "fs": "0.0.1-security",
+    "os": "^0.1.2",
+    "pretty-ms": "^7.0.1",
+    "simplest.db": "^1.0.1-2"
+  },
+  "keywords": [
+    "cart"
+  ]
+}
