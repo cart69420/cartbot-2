@@ -5,7 +5,8 @@ module.exports = {
     execute(msg) {
         msg.reply({embeds: [{
             color: "BLUE",
-            description: `Total members: **${msg.guild.memberCount}**`
+            description: `Total members: **${msg.guild.memberCount}**`,
+            timestamp: new Date()
         }]})
     }
 }

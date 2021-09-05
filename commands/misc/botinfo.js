@@ -39,14 +39,14 @@ module.exports = {
                     **Node.js**: ${process.version}
                     **Discord.js**: ${require('../../package.json').dependencies["discord.js"]}
                 `, inline: true},
-                {name: 'Hosting', value: `
+                /*{name: 'Hosting', value: `
                     **Platform**: ${os.platform()} **OS**: ${os.type()}
                     **Memory Usage**: ${memUsage} MB (${memPerc}%)
                     **Other Processes**: ${totalMem - freemem - memUsage} MB
                     **Free Memory**: ${freemem} MB
                     **Total Memory**: ${totalMem} MB
                     **CPU Model**: ${cpuName}
-                `}
+                `}*/
 
             )
             .setFooter(`Registration Date: `)

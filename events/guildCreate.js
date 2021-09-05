@@ -1,4 +1,4 @@
-const { writeFile } = require('fs')
+const { writeFile, existsSync, mkdirSync } = require('fs')
 const db = require('simplest.db')
 
 module.exports = {
@@ -21,13 +21,16 @@ Nếu bạn muốn tương tác với tôi, hãy dùng prefix mặc định \`>\
                             id: guild.id,
                             prefix: client.prefix
                         }
-                
-                        writeFile(`database/guilds/${guild.id}.json`, JSON.stringify(data), (err) => {
-                            if(err) console.log(err) 
-                            else {
-                                console.log(`Successfully written data for Guild: ${guild.name} (${guild.id})`)
-                            }
-                        })
+                        const dir = 'database/guilds/' + guild.id
+                        if(!existsSync(dir)) {
+                            mkdirSync(dir)
+                            writeFile(`${dir}/settings.json`, JSON.stringify(data), (err) => {
+                                if(err) console.log(err) 
+                                else {
+                                    console.log(`Successfully written data for Guild: ${guild.name} (${guild.id})`)
+                                }
+                            })
+                        }
                     }
             }
             a = a + 1

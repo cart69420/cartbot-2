@@ -68,8 +68,9 @@ module.exports = {
                         `
                     }
                 )
+ 
+                msg.reply({embeds: [info_embed]})
 
-            msg.reply({embeds: [info_embed]})
         } else {
             const help_embed = await new MessageEmbed(base_embed)
                 .setTitle('Help Menu')
@@ -78,8 +79,13 @@ module.exports = {
             await help.getCategories().forEach(cat => {
                 help_embed.addField(`${cat.toUpperCase()} [${help.getCommandsFromCategory(cat).length}]`, help.getCommandsFromCategory(cat, true))
             })
-
-            msg.author.send({embeds: [help_embed]})
+            try {
+                msg.author.send({embeds: [help_embed]})
+            }   catch(e) {
+                console.log(e); 
+                if(e.toString() == 'DiscordAPIError: Cannot send messages to this user')
+                    msg.reply({embeds: [help_embed]})
+            }
         }
     }
 }

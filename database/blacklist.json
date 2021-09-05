@@ -1,7 +1,14 @@
 {
 	"users": {
 		"blacklisted": {
-			
+			"@[]": {
+				"reason": "Blacklisted.",
+				"time": 1629461758677
+			},
+			"868501159353151520": {
+				"reason": "Blacklisted.",
+				"time": 1629461773558
+			}
 		}
 	}
 }

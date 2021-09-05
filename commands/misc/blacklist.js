@@ -52,7 +52,7 @@ module.exports = {
 				} else {
 					msg.reply({embeds: [{
                         title: "User Blacklisted!",
-                        color: client.embed_colors.blacklist,
+                        color: client.config.embed_colors.blacklist,
                         description: `<@!${user}> (${user})\n**Reason**: ${args[2] ? args.splice(2).join(' ') : "Blacklisted."}`,
                         timestamp: new Date()
                     }]})

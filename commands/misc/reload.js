@@ -28,7 +28,7 @@ module.exports = {
             })
             
             msg.reply({embeds: [{
-                color: client.embed_colors.success,
+                color: client.config.embed_colors.success,
                 description: `Đã tải lại lệnh **${reloaded.join('** **')}**!`
             }]})
 		} catch(err) {console.error(err)}
